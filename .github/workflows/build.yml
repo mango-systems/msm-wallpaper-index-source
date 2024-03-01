@@ -13,15 +13,8 @@ jobs:
       
       - name: setup python
         uses: actions/setup-python@v5.0.0
+        run: pip install -r requirements.txt
 
-      - name: install dependencies
-        run: |
-          pip install -r requirements.txt
-      
-      - name: Change run permissions
-        run: |
-          chmod +x build.py
-      
       - name: Build index.json
         run: |
           python3 build.py
