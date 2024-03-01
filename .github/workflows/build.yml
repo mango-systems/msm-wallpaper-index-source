@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Build Wallpaper index
 on: workflow_dispatch
 jobs:
   rebuild-index:
