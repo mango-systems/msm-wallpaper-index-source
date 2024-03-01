@@ -1,6 +1,5 @@
 name: GitHub Actions Demo
-on: 
-  push
+on: workflow_dispatch
 jobs:
   rebuild-index:
     runs-on: ubuntu-latest
@@ -13,7 +12,8 @@ jobs:
       
       - name: setup python
         uses: actions/setup-python@v5.0.0
-        run: pip install -r requirements.txt
+      
+      - run: pip install -r requirements.txt
 
       - name: Build index.json
         run: |
